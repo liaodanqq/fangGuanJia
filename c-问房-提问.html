@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>问房-提问</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<div class="ti">
+			<!--我的问题-->
+			<div class="tidiv">
+				<div class="tidiv_top"><h1 class="tidiv_toph1">我的问题</h1></div>
+				<div class="tidiv_con">
+					<textarea class="tidiv_context J_tidiv_context" maxlength="140" placeholder="多行输入"></textarea>
+					<div class="tidiv_connum">
+						<b class="tidiv_connum_b J_tidiv_connum_b">最多输入140个字！</b>
+						<span class="tidiv_connum1 J_tidiv_connum1">0</span><span>/140</span>
+					</div>
+				</div>
+			</div>
+			<!--问题分类-->
+			<div class="tidiv">
+				<div class="tidiv_top clearfix">
+					<h1 class="tidiv_toph1 fl">问题分类</h1>
+					<span class="tidiv_topspan">(最多选择两项)</span>
+				</div>
+				<div class="gengul_li J_gengul_liChaoxiang">
+					<div class="gengul_lih1_d M_gengul_lih1_d  J_tiwen_wrap">
+						<span class="gengul_lih1_ds M_gengul_lih1_ds J_tiwen">房价</span>
+						<span class="gengul_lih1_ds M_gengul_lih1_ds J_tiwen">楼盘咨询</span>
+						<span class="gengul_lih1_ds M_gengul_lih1_ds J_tiwen">政策</span>
+					</div>
+				</div>
+			</div>
+			<!--提交问题-->
+			<div class="tiwenan">
+				<a class="woti_a" href="c-问房-提交成功.html"><input class="tiwenan_ipt" type="button" value="提问"  /></a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript">
+	//		判断最多输入140个字
+		$('.J_tidiv_context').keyup(function(){
+			var num=$('.J_tidiv_context').val().trim().length;
+			$('.J_tidiv_connum1').html(num)
+			if(num>=140){
+				$('.J_tidiv_connum_b').show();
+				num=140;
+			}else{
+				$('.J_tidiv_connum_b').hide();
+			}
+		})
+//		问题分类-只能最多选两个
+		var preIndex=-1;
+	    $('.J_tiwen_wrap .J_tiwen').on('click', function () {
+	    	if($(this).hasClass('active')){
+				$(this).removeClass('active');
+			}else{
+				$(this).addClass('active');
+			}
+	    	var Lenght=$('.J_tiwen_wrap .J_tiwen.active').length;
+	    	if(Lenght>2){
+	    		$('.J_tiwen_wrap .J_tiwen').eq(preIndex).removeClass('active');
+	    		console.log('应该删除索引为'+preIndex+'的元素');
+	    	}
+	    	preIndex = $(this).index();
+	    })
+	</script>
+</html>

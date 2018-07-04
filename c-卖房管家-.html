@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>卖房管家-</title>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.poppicker.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<div class="sale">
+			<ul class="saleul">
+				<li class="saleulli clearfix">
+					<span class="saleullis fl">小区</span>
+					<div class="saleulliy fr clearfix">
+						<a class="sale_aa fl J_sale_aa_xiao" href="javascript:;">
+							<input class="saleulli_inpt1 fl J_xiaoqu_result" readonly="readonly" type="text" placeholder="输入小区名称" />
+							<img class="saleulli_img" src="images/Arrow_righ.png" />
+						</a>
+					</div>
+				</li>
+				<li class="saleulli2 clearfix">
+					<div class="saleulli2div clearfix">
+						<span class="saleulli2divs fl">楼栋(单元)</span>
+						<div class="saleulli2divy fr"><input class="saleulli_inpt2" type="text" placeholder="输入" />栋(号)<input class="saleulli_inpt2" type="text" placeholder="输入" />单元</div>
+					</div>
+					<div class="saleulli_dbot">地址保密，仅用于信息核验</div>
+				</li>
+				<li class="saleulli clearfix">
+					<span class="saleullis fl">户型</span>
+					<div class="saleulliy fr"><input class="saleulli_inpt2" type="text" placeholder="输入" />室<input class="saleulli_inpt2" type="text" placeholder="输入" />厅<input class="saleulli_inpt2" type="text" placeholder="输入" />卫</div>
+				</li>
+				<li class="saleulli clearfix">
+					<span class="saleullis fl">面积</span>
+					<div class="saleulliy fr">
+						<input class="saleulli_inpt1_mianji" type="text" placeholder="请输入您的房屋面积" />㎡
+					</div>
+				</li>
+				<!--选择分类-->
+				<li class="saleulli clearfix">
+					<span class="saleullis fl">楼层</span>
+					<div class="saleulliy fr" id='showUserPicker'>
+						<span class="saleulli_inpt1" id='userResult'>请选择您的楼层</span>
+						<a class="sale_aa" href="javascript:;"><img class="saleulli_img" src="images/Arrow_righ.png" /></a>
+					</div>
+				</li>
+				<li class="gengul_li">
+					<h1 class="gengul_lih1">装修</h1>
+					<div class="gengul_lih1_d M_gengul_lih1_d J_zhuangStyle_wrap">
+						<span class="gengul_lih1_ds M_gengul_lih1_ds J_zhuangStyle">精装</span>
+						<span class="gengul_lih1_ds M_gengul_lih1_ds J_zhuangStyle">简装</span>
+						<span class="gengul_lih1_ds M_gengul_lih1_ds J_zhuangStyle">毛坯</span>
+					</div>
+				</li>
+				<li class="gengul_li clearfix">
+					<span class="saleullis fl">售价</span>
+					<div class="saleulliy fr"><input class="saleulli_inpt1" type="text" placeholder="单行输入" />万</div>
+				</li>
+			</ul>
+		</div>
+		<div class="tijia_weiguan">
+			<a href="c-卖房管家-我的信息1.html"><input class="tijia_weiguanipt" type="button" value="委托管家"></a>
+		</div>
+		<!--选择小区-->
+		<div class="selectXiaoqu M_selectXiaoqu J_selectXiaoqu">
+			<div class="qus qus_new M_qus clearfix">
+				<div class="zz_xxcity fl J_zz_xxcityClose"><img src="images/search_cancle.png"></div>
+				<div class="qustop_new fl clearfix">				
+					<div class="qustopz fl">
+						<img class="qustopz_img" src="images/search_icon.png">
+						<input class="qustopz_ipt J_qustopz_ipt" type="text" placeholder="单行输入">
+					</div>
+					<div class="qustopy fr J_qustopy">
+						<img class="qustopy_img" src="images/search_cancle.png">
+					</div>
+				</div>
+			</div>
+			<!--小区列表-->
+			<div class="xiaoqu">
+				<ul class="xiaoquu J_xiaoquu">
+					<li class="xiaoquu_li J_xiaoquu_li">
+						<h1 class="xiaoquu_liH1 J_xiaoquu_liH1">太阳园小区</h1>
+						<div class="xiaoquu_lid">
+							<span class="xiaoquu_lids">朝阳 </span>
+							<span class="xiaoquu_lids">朝阳门</span>
+						</div>
+					</li>
+					<!--重复的li-->
+					<li class="xiaoquu_li J_xiaoquu_li">
+						<h1 class="xiaoquu_liH1 J_xiaoquu_liH1">太阳园小区2</h1>
+						<div class="xiaoquu_lid">
+							<span class="xiaoquu_lids">朝阳 </span>
+							<span class="xiaoquu_lids">朝阳门</span>
+						</div>
+					</li>
+					<li class="xiaoquu_li J_xiaoquu_li">
+						<h1 class="xiaoquu_liH1 J_xiaoquu_liH1">太阳园小区3</h1>
+						<div class="xiaoquu_lid">
+							<span class="xiaoquu_lids">朝阳 </span>
+							<span class="xiaoquu_lids">朝阳门</span>
+						</div>
+					</li>
+					<li class="xiaoquu_li J_xiaoquu_li">
+						<h1 class="xiaoquu_liH1 J_xiaoquu_liH1">太阳园小区4</h1>
+						<div class="xiaoquu_lid">
+							<span class="xiaoquu_lids">朝阳 </span>
+							<span class="xiaoquu_lids">朝阳门</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="js/mui.js"></script>
+	<script type="text/javascript" src="js/mui.picker.js"></script>
+	<script type="text/javascript" src="js/mui.poppicker.js"></script>
+	<script type="text/javascript" src="js/moveAddcss.js"></script>
+	<script>
+		(function($, doc) {
+			$.init();
+			$.ready(function() {
+				//选择楼层
+				var userPicker = new $.PopPicker({
+					layer: 2
+				});
+				userPicker.setData([{
+					text: '-1层 ',
+					children:[{
+						text: '共2层'
+					},{
+						text: '共5层'
+					},{
+						text: '共6层'
+					},{
+						text: '共8层'
+					}]
+				}, {
+					text: '1层',
+					children:[{
+						text: '共2层'
+					},{
+						text: '共5层'
+					},{
+						text: '共6层'
+					},{
+						text: '共8层'
+					}]
+				}, {
+					text: '2层',
+					children:[{
+						text: '共2层'
+					},{
+						text: '共5层'
+					},{
+						text: '共6层'
+					},{
+						text: '共8层'
+					}]
+				}, {
+					text: '3层',
+					children:[{
+						text: '共2层'
+					},{
+						text: '共5层'
+					},{
+						text: '共6层'
+					},{
+						text: '共8层'
+					}]
+				}, {
+					text: '4层',
+					children:[{
+						text: '共2层'
+					},{
+						text: '共5层'
+					},{
+						text: '共6层'
+					},{
+						text: '共8层'
+					}]
+				}, {
+					text: '5层',
+					children:[{
+						text: '共2层'
+					},{
+						text: '共5层'
+					},{
+						text: '共6层'
+					},{
+						text: '共8层'
+					}]
+				}]);
+				var showUserPickerButton = doc.getElementById('showUserPicker');
+				var userResult = doc.getElementById('userResult');
+				showUserPickerButton.addEventListener('tap', function(event) {
+					userPicker.show(function(items) {
+						var num_qian=parseInt(items[0].text.replace(/[^0-9]/ig,""));
+						var num_hou=parseInt(items[1].text.replace(/[^0-9]/ig,""));
+						if(num_qian>num_hou){
+							console.log('请选择合适的区间')
+//							alert('请选择合适的价格区间');
+							return false
+						}else{
+							userResult.innerText = items[0].text + " " + items[1].text;
+						}
+						//返回 false 可以阻止选择框的关闭
+						//return false;
+					});
+				}, false);
+				//-----------------------------------------
+			});
+		})(mui, document);
+		
+	//	当搜索框输入内容时-"X"出现
+	$('.J_qustopz_ipt').on('input propertychange',function(){
+		var J_qustopz_iptVal=$('.J_qustopz_ipt').val().trim();
+		if(J_qustopz_iptVal!=''){
+			$('.J_qustopy').show();
+		}else{
+			$('.J_qustopy').hide();
+		}
+	})
+	$('.J_qustopy').click(function(){
+		$(this).hide();
+		$('.J_qustopz_ipt').val('');
+	})
+	//		选择小区
+	$('.J_sale_aa_xiao').click(function(){
+		$('.J_selectXiaoqu').show();
+		$('.J_selectXiaoqu').animate({
+			'left':0
+		},600)
+	})
+	var windowWidth=$(window).width();
+	$('.J_zz_xxcityClose').click(function(){
+		$('.J_selectXiaoqu').hide();
+		$('.J_selectXiaoqu').animate({
+			'left':windowWidth
+		},600)
+	})
+	//	选择小区后传值
+	$('.J_xiaoquu .J_xiaoquu_li').click(function(){
+		var _html=$(this).find('.J_xiaoquu_liH1').html();
+		$('.J_xiaoqu_result').val(_html);
+		$('.J_selectXiaoqu').hide();
+		$('.J_selectXiaoqu').animate({
+			'left':windowWidth
+		},600)
+	})
+//	卖房管家-输入小区名称点击后进入新页面输入小区名称，在新页面输入后通过键盘的确定键确认
+	function chuanzhi(){
+		var J_qustopz_iptHtml=$('.J_qustopz_ipt').val().trim();
+		$('.J_xiaoqu_result').val(J_qustopz_iptHtml);
+		$('.J_selectXiaoqu').hide();
+		$('.J_selectXiaoqu').animate({
+			'left':windowWidth
+		},600)
+		$('.J_qustopz_ipt').val('');
+		$('.J_qustopy').hide();
+	}
+	
+	$(document).keyup(function(event){
+	  if(event.keyCode ==13){
+	    chuanzhi();
+	  }
+	});
+	
+	//	选择装修风格
+	$('.J_zhuangStyle_wrap .J_zhuangStyle').click(function(){
+		$('.J_zhuangStyle_wrap .J_zhuangStyle').removeClass('active');
+		$(this).addClass('active');
+	})
+	
+	
+	</script>
+</html>

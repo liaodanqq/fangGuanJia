@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>卖房管家-我的信息1</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<div class="masg"> 
+			<!--标题-->
+			<div class="masg_top"><h1 class="masg_toph1">我的信息</h1></div>
+			<div class="masg_form">
+				<div class="masg_formitem clearfix">
+					<span class="masg_formitem_s fl">姓名：</span>
+					<input class="masg_formitem_ipt fl J_masg_formitem_iptName" type="text" placeholder="请输入姓名" />
+				</div>
+				<div class="error J_error_xingming">12321</div>
+				<div class="masg_formitem clearfix">
+					<span class="masg_formitem_s fl">电话：</span>
+					<input class="masg_formitem_ipt fl J_masg_formitem_iptPhone" type="text" placeholder="请输入电话" />
+				</div>
+				<div class="error J_error_phone"></div>
+				<div class="masg_formitem clearfix">
+					<span class="masg_formitem_s fl">验证：</span>
+					<div class="masg_formitem_ipt fl clearfix">
+						<input class="masg_formitem_ipt_ipt fl J_masg_formitem_iptYan" type="text" placeholder="请输入验证码"  />
+						<input type="text" value="获取验证码" readonly="readonly" class="masg_formitem_ipt_s J_masg_formitem_ipt_s fr"  onclick="sendemail()" />
+					</div>
+				</div>
+				<div class="error J_error_yanzheng"></div>
+				<div class="masg_text">优质房源数量稀缺，好房源极易与您擦肩而过！订阅您的专属房源信息，如果出现符合您要求的房源，管家将第一时间将提醒发送至您的手机。</div>
+				<div class="masg_submit J_masg_submit">
+					<input class="clmasg_submit_ipt J_clmasg_submit_ipt" type="button" value="提交"/>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript">
+//		提交表单的相关验证
+		var J_masg_formitem_iptName=$('.J_masg_formitem_iptName').val().trim();
+		var J_masg_formitem_iptPhone=$('.J_masg_formitem_iptPhone').val().trim();
+		var J_masg_formitem_iptYan=$('.J_masg_formitem_iptYan').val().trim();
+		if(J_masg_formitem_iptName!=''&&J_masg_formitem_iptPhone!=''&&J_masg_formitem_iptYan!=''){
+			$('.J_masg_submit').addClass('active');
+		}
+		
+		$('.J_clmasg_submit_ipt').click(function(){
+			var J_masg_formitem_iptName=$('.J_masg_formitem_iptName').val().trim();
+			var J_masg_formitem_iptPhone=$('.J_masg_formitem_iptPhone').val().trim();
+			var J_masg_formitem_iptYan=$('.J_masg_formitem_iptYan').val().trim();
+			if(J_masg_formitem_iptName==''){
+				$('.J_error_xingming').show();
+				$('.J_error_xingming').html('请输入姓名！');
+				return;
+			}
+			if(J_masg_formitem_iptPhone==''){
+				$('.J_error_phone').show();
+				$('.J_error_phone').html('请输入电话！');
+				return;
+			}
+			if(J_masg_formitem_iptYan==''){
+				$('.J_error_yanzheng').show();
+				$('.J_error_yanzheng').html('请输入验证码！');
+				return;
+			}
+			if(J_masg_formitem_iptName!=''&&J_masg_formitem_iptPhone!=''&&J_masg_formitem_iptYan!=''){
+				window.location.href="c-卖房管家-委托成功.html";
+			}
+		})
+		
+		$('.J_masg_formitem_iptName').focus(function(){
+			$('.J_error_xingming').hide();
+			$('.J_error_xingming').html('');
+		})
+		$('.J_masg_formitem_iptPhone').focus(function(){
+			$('.J_error_phone').hide();
+			$('.J_error_phone').html('');
+		})
+		$('.J_masg_formitem_iptYan').focus(function(){
+			$('.J_error_yanzheng').hide();
+			$('.J_error_yanzheng').html('');
+		})
+		
+		
+		
+		$('.J_masg_formitem_iptName').on('input propertychange',function(){
+			var J_masg_formitem_iptName=$('.J_masg_formitem_iptName').val().trim();
+			var J_masg_formitem_iptPhone=$('.J_masg_formitem_iptPhone').val().trim();
+			var J_masg_formitem_iptYan=$('.J_masg_formitem_iptYan').val().trim();
+			if(J_masg_formitem_iptName!=''&&J_masg_formitem_iptPhone!=''&&J_masg_formitem_iptYan!=''){
+				$('.J_masg_submit').addClass('active');
+			}else{
+				$('.J_masg_submit').removeClass('active');
+			}
+		})
+		$('.J_masg_formitem_iptPhone').on('input propertychange',function(){
+			var J_masg_formitem_iptName=$('.J_masg_formitem_iptName').val().trim();
+			var J_masg_formitem_iptPhone=$('.J_masg_formitem_iptPhone').val().trim();
+			var J_masg_formitem_iptYan=$('.J_masg_formitem_iptYan').val().trim();
+			if(J_masg_formitem_iptName!=''&&J_masg_formitem_iptPhone!=''&&J_masg_formitem_iptYan!=''){
+				$('.J_masg_submit').addClass('active');
+			}else{
+				$('.J_masg_submit').removeClass('active');
+			}
+		})
+		$('.J_masg_formitem_iptYan').on('input propertychange',function(){
+			var J_masg_formitem_iptName=$('.J_masg_formitem_iptName').val().trim();
+			var J_masg_formitem_iptPhone=$('.J_masg_formitem_iptPhone').val().trim();
+			var J_masg_formitem_iptYan=$('.J_masg_formitem_iptYan').val().trim();
+			if(J_masg_formitem_iptName!=''&&J_masg_formitem_iptPhone!=''&&J_masg_formitem_iptYan!=''){
+				$('.J_masg_submit').addClass('active');
+			}else{
+				$('.J_masg_submit').removeClass('active');
+			}
+		});
+		
+//		60秒倒计时
+	var countdown=60; 
+	function sendemail(){
+	    var obj = $(".J_masg_formitem_ipt_s");
+	    	settime(obj);
+	    }
+	function settime(obj) { //发送验证码倒计时
+	    if (countdown == 0) { 
+	        obj.attr('disabled',false); 
+	        //obj.removeattr("disabled"); 
+	        obj.val("获取验证码");
+	        countdown = 60; 
+	        return;
+	    } else { 
+	        obj.attr('disabled',true);
+	        obj.val("" + countdown + "s后重发");
+	        countdown--; 
+    } 
+	setTimeout(function() { 
+	    settime(obj) }
+	    ,1000) 
+	}
+
+		
+		
+	</script>
+</html>

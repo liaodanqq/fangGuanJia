@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>买房管家-</title>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.poppicker.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<ul class="gengullist">
+			<li class="gengul_li">
+				<div class="tidiv_top clearfix">
+					<h1 class="tidiv_toph1 fl">我关注的区域</h1>
+					<span class="tidiv_topspan">(可多选)</span>
+				</div>
+				<div class="gengul_lih1_d M_gengul_lih1_d J_guanareawrap">
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_guanarea">朝阳区</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_guanarea">海淀区</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_guanarea">石景山</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_guanarea">门头沟</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_guanarea">朝阳区</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_guanarea">东城区</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_guanarea">门头沟</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_guanarea">朝阳区</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_guanarea">东城区</span>
+				</div>
+			</li>
+			<li class="gengul_li">
+				<div class="tidiv_top clearfix">
+					<h1 class="tidiv_toph1 fl">类型</h1>
+					<span class="tidiv_topspan">(可多选)</span>
+				</div>
+				<div class="gengul_lih1_d M_gengul_lih1_d J_typewrap">
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_type">高层</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_type">洋房</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_type">别墅</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_type">公寓</span>
+				</div>
+			</li>
+			<li class="gengul_li">
+				<div class="tidiv_top clearfix">
+					<h1 class="tidiv_toph1 fl">户型</h1>
+					<span class="tidiv_topspan"></span>
+				</div>
+				<div class="gengul_lih1_d M_gengul_lih1_d J_huxintypewrap">
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_huxintype">1室</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_huxintype">2室</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_huxintype">3室</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_huxintype">4室</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_huxintype">4室以上</span>
+				</div>
+			</li>
+		</ul>
+		<!--选择价格/首付-->
+		<ul class="price">
+			<li class="priceli clearfix">
+				<!--左-->
+				<div class="priceliz fl">
+					<img class="priceliz_img" src="images/price.png" />
+					<span class="priceliz_s">价格</span>
+				</div>
+				<!--右-->
+				<div class="priceliy fr" id='showUserPicker_jiage'>
+					<span class="priceliy_s" id='userResult_jiage'>请选择价格区间</span>
+					<img class="priceliy_img" src="images/Arrow_righ.png" />
+				</div>
+			</li>
+			<li class="priceli clearfix">
+				<!--左-->
+				<div class="priceliz fl">
+					<img class="priceliz_img" src="images/shoufu.png" />
+					<span class="priceliz_s">首付</span>
+				</div>
+				<!--右-->
+				<div class="priceliy fr" id='showUserPicker_shoufu'>
+					<span class="priceliy_s" id='userResult_shoufu'>请选择首付金额</span>
+					<img class="priceliy_img" src="images/Arrow_righ.png" />
+				</div>
+			</li>
+		</ul>
+		<!--说明-->
+		<div class="shuoming">
+			<p class="shuoming_p">住宅最低首付30%，最高贷款年限25年，基准利率4.9%，商业需公司名义全款购买，利率上浮10%至5.39%</p>
+		</div>
+		<!--买房目的-->
+		<ul class="gengullist">
+			<li class="gengul_li">
+				<div class="tidiv_top clearfix">
+					<h1 class="tidiv_toph1 fl">买房目的</h1>
+					<span class="tidiv_topspan">(可多选)</span>
+				</div>
+				<div class="gengul_lih1_d M_gengul_lih1_d J_decoretiongwrap">
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_decoretiong">刚需</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_decoretiong">改善</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_decoretiong">投资</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_decoretiong">落户</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_decoretiong">上学</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_decoretiong">养老</span>
+					<span class="gengul_lih1_ds M_gengul_lih1_ds J_decoretiong">其它</span>
+				</div>
+			</li>
+		</ul>
+		<!--提交表单-委托管家-->
+		<div class="tijia_weiguan">
+			<a href="c-买房管家-我的信息.html"><input class="tijia_weiguanipt" type="button" value="委托管家"  /></a>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="js/mui.js"></script>
+	<script type="text/javascript" src="js/mui.picker.js"></script>
+	<script type="text/javascript" src="js/mui.poppicker.js"></script>
+	<script type="text/javascript" src="js/moveAddcss.js"></script>
+	<script type="text/javascript">
+
+		(function($, doc) {
+			$.init();
+			$.ready(function() {
+				//		选择价格
+				var userPicker_jiage = new $.PopPicker({
+					layer: 2
+				});
+				userPicker_jiage.setData([{
+					text: '50万',
+					children:[{
+						text: '80万'
+					},{
+						text: '90万'
+					},{
+						text: '100万'
+					},{
+						text: '110万'
+					}]
+				}, {
+					text: '60万',
+					children:[{
+						text: '80万'
+					},{
+						text: '90万'
+					},{
+						text: '100万'
+					},{
+						text: '110万'
+					}]
+				}, {
+					text: '70万',
+					children:[{
+						text: '80万'
+					},{
+						text: '90万'
+					},{
+						text: '100万'
+					},{
+						text: '110万'
+					}]
+				}, {
+					text: '80万',
+					children:[{
+						text: '80万'
+					},{
+						text: '90万'
+					},{
+						text: '100万'
+					},{
+						text: '110万'
+					}]
+				}]);
+				var showUserPickerButton_jiage = doc.getElementById('showUserPicker_jiage');
+				var userResult_jiage = doc.getElementById('userResult_jiage');
+				showUserPickerButton_jiage.addEventListener('tap', function(event) {
+					userPicker_jiage.show(function(items) {
+						var num_qian=parseInt(items[0].text.replace(/[^0-9]/ig,""));
+						var num_hou=parseInt(items[1].text.replace(/[^0-9]/ig,""));
+						if(num_qian>=num_hou){
+							console.log('请选择合适的区间')
+//							alert('请选择合适的价格区间');
+							return false
+						}else{
+							userResult_jiage.innerText = items[0].text + " " + items[1].text;
+						}
+						//返回 false 可以阻止选择框的关闭
+						//return false;
+					});
+				}, false);
+				//-----------------------------------------
+				//		选择首付
+				var userPicker_shoufu = new $.PopPicker({
+					layer: 2
+				});
+				userPicker_shoufu.setData([{
+					text: '10万',
+					children:[{
+						text: '30万'
+					},{
+						text: '40万'
+					},{
+						text: '60万'
+					},{
+						text: '80万'
+					}]
+				}, {
+					text: '20万',
+					children:[{
+						text: '30万'
+					},{
+						text: '40万'
+					},{
+						text: '60万'
+					},{
+						text: '80万'
+					}]
+				}, {
+					text: '10万',
+					children:[{
+						text: '30万'
+					},{
+						text: '40万'
+					},{
+						text: '60万'
+					},{
+						text: '80万'
+					}]
+				}, {
+					text: '40万',
+					children:[{
+						text: '30万'
+					},{
+						text: '40万'
+					},{
+						text: '60万'
+					},{
+						text: '80万'
+					}]
+				}, {
+					text: '50万',
+					children:[{
+						text: '30万'
+					},{
+						text: '40万'
+					},{
+						text: '60万'
+					},{
+						text: '80万'
+					}]
+				}]);
+				var showUserPickerButton_shoufu = doc.getElementById('showUserPicker_shoufu');
+				var userResult_shoufu = doc.getElementById('userResult_shoufu');
+				showUserPickerButton_shoufu.addEventListener('tap', function(event) {
+					userPicker_shoufu.show(function(items) {
+						var num_qian_shoufu=parseInt(items[0].text.replace(/[^0-9]/ig,""));
+						var num_hou_shoufu=parseInt(items[1].text.replace(/[^0-9]/ig,""));
+						if(num_qian_shoufu>=num_hou_shoufu){
+							console.log('请选择合适的区间')
+//							alert('请选择合适的价格区间');
+							return false
+						}else{
+							userResult_shoufu.innerText = items[0].text + " " + items[1].text;
+						}
+						
+						//返回 false 可以阻止选择框的关闭
+						//return false;
+					});
+				}, false);
+			});
+		})(mui, document);
+	
+		//		我关注的区域-点击选择
+		$('.J_guanareawrap .J_guanarea').click(function(){
+			if($(this).hasClass('active')){
+				$(this).removeClass('active');
+			}else{
+				$(this).addClass('active');
+			}
+		})
+		//		类型-点击选择
+		$('.J_typewrap .J_type').click(function(){
+			if($(this).hasClass('active')){
+				$(this).removeClass('active');
+			}else{
+				$(this).addClass('active');
+			}
+		})
+		//	买房目的-点击选择
+		$('.J_huxintypewrap .J_huxintype').click(function(){
+			$('.J_huxintypewrap .J_huxintype').removeClass('active');
+			$(this).addClass('active');  
+		})
+		//		类型-点击选择
+		$('.J_decoretiongwrap .J_decoretiong').click(function(){
+			if($(this).hasClass('active')){
+				$(this).removeClass('active');
+			}else{
+				$(this).addClass('active');
+			}
+		})
+	</script>
+</html>

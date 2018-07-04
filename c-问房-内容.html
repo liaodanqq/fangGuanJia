@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>问房-内容</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<div class="cont">
+			<h1 class="conth1">苏格拉底的伟大之处在哪？</h1>
+			<p class="contp">为什么这种对哲学的兴趣大爆炸会发生呢？部分是因为苏格拉底改变了哲学问题的焦点。苏格拉底之前，哲学家们主要感兴趣的是解释他们周围的世界以及这个世界的现象——他们感兴趣做的事情就是我们现在所说的科学。</p>
+			<div class="contdiv"><img src="images/content.png" /></div>
+			<p class="contp">为什么这种对哲学的兴趣大爆炸会发生呢？部分是因为苏格拉底改变了哲学问题的焦点。苏格拉底之前，哲学家们主要感兴趣的是解释他们周围的世界以及这个世界的现象——他们感兴趣做的事情就是我们现在所说的科学。</p>
+			<div class="contbot clearfix">
+				<!--新增的标签内容-->
+				<div class="fl" style="width: 75%;">
+					<span style="margin-bottom: 5px;" class="meesboqians blue">问题标签</span>
+					<span style="margin-bottom: 5px;" class="meesboqians pink">问题标签</span>
+				</div>
+				
+				<div class="contbot_right fr J_contbot_right">
+					<span class="contbot_img J_contbot_img"></span>
+					<span class="contbot_span J_contbot_span">有用(<b>158</b>)</span>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript">
+	//	点赞
+	$('.J_contbot_right').click(function(){
+		var num=$(this).find('.J_contbot_span b').html();
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+			num--;
+			$(this).find('.J_contbot_span b').html(num);
+		}else{
+			$(this).addClass('active');
+			num++;
+			$(this).find('.J_contbot_span b').html(num);
+		}
+	})
+	</script>
+</html>

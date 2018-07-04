@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>帮我找房-二手房-地图1</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" href="https://s1.ljcdn.com/hulk-web/static/m/asset/pages/mapPos/index.css?_v=20180329183245f1b">
+	</head>
+<body style="overflow: hidden;">
+<!-- 百度官方号相关 -->
+<div class="wrapper" data-logmsg="010A1A6403F04D587F62016A6DF91A8A">
+	<div class="main_start" id="main_start">
+		<!--页面-->
+		<!--TODO here-->
+	    <section class="page page_map" style="height: 100%;width: 100%;">
+			<div class="map ditu_conten_div M_ditu_conten_div" id="map-content" style="overflow: hidden;position: relative;z-index: 0;color: rgb(0, 0, 0);text-align: left;background-color: rgb(243, 241, 236);height: 100%;width: 100%;top: 0;left:0">
+			</div>
+		</section>
+	</div>
+</div>
+
+</body>
+<!-- 静态资源 -->
+
+<script type="text/javascript" src="js/ditu.js"></script>
+
+<script type="text/javascript">
+$ljBridge.ready(function(bridge,webstatus) {
+	
+	var ljweb_channel_key = "m_pages_mapPos";
+	window.__UDL_CONFIG={"pid":"lianjiamweb","ljweb_channel_key":ljweb_channel_key,"cid":"110000","f":document.referrer};
+	if(ljweb_channel_key == 'm_pages_userFavoriteNewHouse'){
+		window.__UDL_CONFIG['pid'] = 'xinfangm';
+	}
+	!function(e){if(!window.$ULOG||1!==window.$ULOG.state){var n={add:function(e,n,t){e.addEventListener?e.addEventListener(n,t,!1):e.attachEvent?e.attachEvent("on"+n,t):null===e["on"+n]&&(e["on"+n]=t)},remove:function(e,n,t){e.removeEventListener?e.removeEventListener(n,t,!1):e.dispatchEvent?e.detachEvent("on"+n,t):e["on"+n]=null}},t={extend:function(e,n){if(null==e||"object"!=typeof e)return e;if(e.constructor!=Object&&e.constructor!=Array)return e;if(e.constructor==Date||e.constructor==RegExp||e.constructor==Function||e.constructor==String||e.constructor==Number||e.constructor==Boolean)return new e.constructor(e);n=n||new e.constructor;for(var o in e)e.hasOwnProperty(o)&&(n[o]="undefined"==typeof n[o]?t.extend(e[o],null):n[o]);return n},getIndex:function(e,n){if(n.indexOf)return n.indexOf(e);for(var t=0,o=n.length;t<o;t++)if(n[t]===e)return t;return-1},getCookie:function(e){if(document.cookie.length>0){var n=document.cookie.indexOf(e+"=");if(n!=-1){n=n+e.length+1;var t=document.cookie.indexOf(";",n);return t==-1&&(t=document.cookie.length),decodeURIComponent(document.cookie.substring(n,t))}}return""}},o={send:function(e){var n=new Image,t="//dig.lianjia.com/t.gif",o=[];try{e=encodeURIComponent(JSON.stringify(e))}catch(e){}e&&(o.push("r="+ +new Date),o.push("d="+e)),t+="?"+o.join("&"),n.onload=n.onerror=function(){n=null},n.src=t},makeParam:function(n){var o={};return o=t.extend(n,o),o=t.extend(e,o),o.key=void 0===o.key?window.location.href:o.key,o.uuid=void 0===o.uuid?t.getCookie("lianjia_uuid"):o.uuid,o.ssid=void 0===o.ssid?t.getCookie("lianjia_ssid"):o.ssid,o},parseElement:function(e){var n=e.tagName.toLowerCase(),o=e.className.replace(/ /g,""),r=e.id;o=0==o.length?"":"."+o.replace(/ /g,"."),r=0==r.length?"":"#"+r;var i=n+r+o,d=null===e.parentElement?0:t.getIndex(e,Array.prototype.slice.apply(e.parentElement.querySelectorAll(i)));return{selector:i,index:d}},loadTime:+new Date,buffer:[]};window.$ULOG&&void 0===window.$ULOG.state&&window.$ULOG.buffer&&window.$ULOG.buffer.length>0&&(o.buffer=t.extend(window.$ULOG.buffer,[])),window.$ULOG={send:function(e,n){n=n||{},n.evt=e+"";var r=o.makeParam(n);switch(n.evt){case"1":o.send(t.extend(r,{cid:t.getCookie("select_city")||""}));break;case"2":var i=Math.round((+new Date-o.loadTime)/1e3);o.send(t.extend(r,{stt:i}));break;case"3":o.send(t.extend(r,{f:document.referrer||"",cid:t.getCookie("select_city")||""}));break;case"4":break;case"1,3":o.send(t.extend(r,{f:document.referrer||"",cid:t.getCookie("select_city")||""}));break;default:o.send(r)}},update:function(n){for(var t in n)n.hasOwnProperty(t)&&(e[t]=n[t])},state:1};for(var r in o.buffer)if(o.buffer.hasOwnProperty(r)){var i=o.buffer[r];"string"==typeof i?window.$ULOG.send(i):window.$ULOG.send(i[0],i[1])}window.$ULOG.send("1,3"),n.add(window,"beforeunload",function(){window.$ULOG.send("2")}),n.add(document.documentElement,"mousedown",function(e){window.$ULOG.send("4")})}}(window.__UDL_CONFIG||{});
+	});
+</script>
+<!--动态脚本内容-->
+<script type="text/javascript" src="https://s1.ljcdn.com/hulk-web/static/m/asset/pages/mapPos/index.js?_v=20180329183245f1b"></script>
+<script>
+$LMB.start('main_start','m_pages_mapPos',{"fe_root":"https:\/\/s1.ljcdn.com\/hulk-web\/static\/m\/","version":"20180329183245f1b","nation":{"short":"#"},"js_ns":"m_pages_mapPos","ajax_css_inline":[],"cur_city_id":110000,"cur_city_name":"\u5317\u4eac","cur_city_short":"bj","pos":"116.347225,39.976314"});
+</script>
+<script>new Image().src='//dig.lianjia.com/t.gif?r='+(Date.now()/1000|0)+'&d='+encodeURIComponent(JSON.stringify({pid:'lianjiamweb',key:location.href,evt:10050,f:document.referrer,uuid:142857,ssid:9527}))</script>
+<!-- /静态资源 -->
+
+
+</html>
